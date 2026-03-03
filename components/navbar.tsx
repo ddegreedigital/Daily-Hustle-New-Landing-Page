@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import clsx from "clsx"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Navbar() {
     const [scrolled, setScrolled] = useState(false)
@@ -26,13 +27,13 @@ export function Navbar() {
             <div className="mx-auto max-w-7xl px-6 h-[76px] flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center gap-3 cursor-pointer">
-                    {/* simple logo badge */}
-                    <div className="h-9 w-9 rounded-xl bg-[color:var(--brand-red)] text-white grid place-items-center text-sm font-bold">
-                        DH
-                    </div>
-                    <span className="font-extrabold tracking-tight text-[18px]">
-                        DAILYHUSTLE
-                    </span>
+                    <Image 
+                        src="/images/dailyhustle-logo.png" 
+                        alt="Daily Hustle Logo" 
+                        width={120} 
+                        height={40}
+                        className="h-10 w-auto"
+                    />
                 </div>
 
                 {/* Nav */}
